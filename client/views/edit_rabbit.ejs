@@ -1,0 +1,47 @@
+<!DOCTYPE html>​
+​<html lang="en">​
+​<head>​
+<meta charset="UTF-8">​
+<title>Rabbit</title>​
+​</head>​
+<style media="screen">
+  body{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .container {
+    position:relative;
+    bottom: 500px;
+    left: 100px;
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+  }
+</style>
+​<body>​
+  <!-- <div class'container'> -->
+<img src="https://lh3.googleusercontent.com/-r40EgMIwCnc/VTvh_KnjJtI/AAAAAAAAAXs/_6tYZjzabYw/s0-d/anime-bunny-cute-funny-Favim.com-2033358.png" alt="" />
+  <div class='container'>
+  <h2>Edit your Rabbit</h2>
+<form action="/mongoose/<%= mongoose._id %>" method="post">​
+  <div>​
+    <label for="">Rabbit Name: </label>​
+    <input type="text" name="name" id="" value="<%= mongoose.name %>">​
+  </div>​
+  <div>​
+    <label for="">Rabbit Weight: </label>​
+    <input type="text" name="weight" id="" value="<%= mongoose.weight %>">​
+  </div>​
+  <div>​
+    <label for="">Rabbit Color: </label>​
+    <input type="text" name="color" id="" value="<%= mongoose.color %>">​
+  </div>​<br><br>
+  <hr>
+  <input type="submit" value="Edit Rabbit">​
+</form>​
+</div>
+</div>
+​</body>​
+​</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>​
+​<html lang="en">​
+​<head>​
+<meta charset="UTF-8">​
+<title>Rabbit Dashboard</title>​
+​</head>​
+<style media="screen">
+  body{
+    width: 750px;
+    height: auto;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .row {
+    display: inline-block;
+  }
+</style>
+​<body>​
+  <div class='row'>
+   <ul>​
+      <li> Name: <%= mongoose.name %> </li>​
+      <li> Weight: <%= mongoose.weight %> </li>​
+      <li> Color: <%= mongoose.color %></li>​
+   </ul>​
+     <hr>​
+<button><a href="/mongooses/<%= mongoose._id %>/edit">Edit</a></button>​
+<button><a href="/">Back</a></button>​
+</div>
+<div class='row'>
+<img src="http://img-cache.cdn.gaiaonline.com/02dcc3a7efd43b69668cd794cdf4bb2c/https://38.media.tumblr.com/d19c0cb1bf96fc0055236894514292e3/tumblr_n3wdzqbF0H1rk3nmho1_500.gif" alt="" />
+</div>​
+</body>​
+​</html>

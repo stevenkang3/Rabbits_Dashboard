@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New_Rabbit</title>
+  </head>
+  <style>
+  body{
+    width: 800px;
+    height: auto;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .container {
+
+  }
+  #info{
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+    padding: 50px;
+    position: relative;
+    bottom: 200px;
+  }
+  .row{
+    display: inline-block;
+  }
+  </style>
+  <body>
+    <div class"container">
+    <h2>Add New Rabbit</h2>
+    <%= errors %>​
+    <div class='row'>
+    <img src="http://data.whicdn.com/images/19316700/large.jpg" alt="" />
+    </div>
+
+    <div class='row' id='info'>
+    <form action="/mongooses" method='post'>
+      Name: <input type="text" name="name" value=""><br><br>
+      Weight: <input type="text" name="weight" value=""><br><br>
+      Color: <input type="text" name="color" value=""><br><br>
+      <hr>
+      <input type='submit' value='Add Rabbit'>
+    </form><br><br>
+
+    <button><a href="/">Back</a></button>
+  </div>
+  </div>
+  </body>
+</html>

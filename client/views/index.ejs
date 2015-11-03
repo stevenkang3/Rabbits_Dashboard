@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rabbits</title>
+  </head>
+  <style media="screen">
+  body{
+    width: 700px;
+    padding: 30px;
+    margin: 0 auto;
+
+  }
+  h2 {
+    width: 300px;
+    margin: 0 auto;
+  }
+    .bunny{
+      width: 200px;
+      height: auto;
+      border: 1px solid black;
+      display: inline-block;
+    }
+    #delete {
+      width: 50px;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <div id="container">
+<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSjD_A_AvJt7jqBXOTlYbfKfYZ0M-IklS-tE3AVkaGIeOoQnHIL" alt="" />
+      <h2>Welcome to Rabbits World</h2><br>
+
+
+
+    <% for (var x in mongooses) { %>​
+      <div class='bunny'>
+       <ul>​
+         <li><a href="/mongooses/<%= mongooses[x]._id %>">Name: <%= mongooses[x].name %></a></li>​
+         <li>Weight: <%= mongooses[x].weight %></li>​
+         <li>Color: <%= mongooses[x].color %></li>​
+       </ul>​
+      <form id='delete' action="/mongooses/<%= mongooses[x]._id %>/destroy" method="post">​
+         <input autofocus=""type="submit" value="Delete">​
+      </form>​
+      </div>
+  <% } %>​
+</div>
+<hr>
+  <br><button><a href="/mongooses/new">Add new Rabbit</a></button>
+  </body>
+</html>
